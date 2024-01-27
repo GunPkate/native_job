@@ -15,3 +15,6 @@ npm install expo-font axios react-native-dotenv
 
 ## fix expo-router barbel
 delete expo-router/babel in babel.config
+
+## fix @env
+https://oss.issuehunt.io/r/goatandsheep/react-native-dotenv/issues/52
