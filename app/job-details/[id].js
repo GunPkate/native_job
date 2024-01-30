@@ -20,6 +20,8 @@ const jobDetails = () =>{
     const {data, isLoading, error, refetch} = useFetch('job-details',{job_id: params.id})
     console.log("002 jobDetails",data)
 
+    const tabs = ["About","Qualifications","Responsibilities"];
+    const [activeTab,setActiveTab] = useState(tabs[0]);
     const onRefresh = () =>{
 
     } 
@@ -68,7 +70,11 @@ const jobDetails = () =>{
                                 companyName={data[0].employer_name}
                                 location={data[0].job_country}
                             />
-                            <Tabs/>
+                            <Tabs
+                                tabs = {tabs}
+                                activeTab = {activeTab}
+                                setActiveTab = {setActiveTab}
+                            />
                         </View>)
                     }
                 </ScrollView>
